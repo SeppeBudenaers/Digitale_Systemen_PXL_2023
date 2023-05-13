@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/01_project/DMX_FPGA/DMX_pynqz2/DMX_pynqz2.srcs/constrs_1/new/io.xdc rfile:../../../DMX_pynqz2.srcs/constrs_1/new/io.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H16 [get_ports CLK_in]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U10 [get_ports CLK_out]

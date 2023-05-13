@@ -1,0 +1,7 @@
+Running: xsim.dir/seppe_behav/xsimk.exe -simmode gui -wdb seppe_behav.wdb -simrunnum 0 -socket 59902
+Design successfully loaded
+Design Loading Memory Usage: 7152 KB (Peak: 7152 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 15644 KB (Peak: 15644 KB)
+Simulation CPU Usage: 156 ms

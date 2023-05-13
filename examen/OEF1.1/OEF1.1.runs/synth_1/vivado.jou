@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Mar 26 21:52:33 2023
+# Process ID: 20428
+# Current directory: C:/01_project/DMX_FPGA/DMX_pynqz2/DMX_pynqz2.runs/synth_1
+# Command line: vivado.exe -log Clock_Divider_250khz.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Clock_Divider_250khz.tcl
+# Log file: C:/01_project/DMX_FPGA/DMX_pynqz2/DMX_pynqz2.runs/synth_1/Clock_Divider_250khz.vds
+# Journal file: C:/01_project/DMX_FPGA/DMX_pynqz2/DMX_pynqz2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-55K0DUP, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source Clock_Divider_250khz.tcl -notrace

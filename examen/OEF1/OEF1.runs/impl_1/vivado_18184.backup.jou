@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar 30 11:15:13 2023
+# Process ID: 18184
+# Current directory: C:/02_PXL/01_Digitale_Systemen/examen/OEF1/OEF1.runs/impl_1
+# Command line: vivado.exe -log seppe.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source seppe.tcl -notrace
+# Log file: C:/02_PXL/01_Digitale_Systemen/examen/OEF1/OEF1.runs/impl_1/seppe.vdi
+# Journal file: C:/02_PXL/01_Digitale_Systemen/examen/OEF1/OEF1.runs/impl_1\vivado.jou
+# Running On: DESKTOP-55K0DUP, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source seppe.tcl -notrace
