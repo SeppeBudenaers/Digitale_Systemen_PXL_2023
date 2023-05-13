@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/02_PXL/01_Digitale_Systemen/Labo/Oef_2/Oef_2.srcs/constrs_1/new/optellen.xdc rfile:../../../Oef_2.srcs/constrs_1/new/optellen.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property BEL D5LUT [get_cells {Resultaat_OBUF[0]_inst_i_1}]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property LOC SLICE_X0Y10 [get_cells {Resultaat_OBUF[0]_inst_i_1}]

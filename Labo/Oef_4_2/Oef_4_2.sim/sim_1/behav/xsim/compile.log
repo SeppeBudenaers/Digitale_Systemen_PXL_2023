@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/02_PXL/01_Digitale_Systemen/Labo/Oef_4_2/Oef_4_2.srcs/sources_1/new/Boolean_expression.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Boolean_expression'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/02_PXL/01_Digitale_Systemen/Labo/Oef_4_2/Oef_4_2.srcs/sim_1/new/Boolean_expression_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Boolean_expression_tb'

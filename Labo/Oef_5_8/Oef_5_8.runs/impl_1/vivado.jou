@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Mar 14 13:56:05 2023
+# Process ID: 4112
+# Current directory: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_7/Oef_5_7.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_7/Oef_5_7.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_7/Oef_5_7.runs/impl_1\vivado.jou
+# Running On: DESKTOP-55K0DUP, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

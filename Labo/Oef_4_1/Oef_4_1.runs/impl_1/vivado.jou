@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jan 26 09:06:20 2023
+# Process ID: 22976
+# Current directory: C:/02_PXL/01_Digitale_technieken/VHDL/Labo_week_11_sevensegment/Labo_week_11_sevensegment.runs/impl_1
+# Command line: vivado.exe -log Sevensegment.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Sevensegment.tcl -notrace
+# Log file: C:/02_PXL/01_Digitale_technieken/VHDL/Labo_week_11_sevensegment/Labo_week_11_sevensegment.runs/impl_1/Sevensegment.vdi
+# Journal file: C:/02_PXL/01_Digitale_technieken/VHDL/Labo_week_11_sevensegment/Labo_week_11_sevensegment.runs/impl_1\vivado.jou
+# Running On: DESKTOP-55K0DUP, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source Sevensegment.tcl -notrace

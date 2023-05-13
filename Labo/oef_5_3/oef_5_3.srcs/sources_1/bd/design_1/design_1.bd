@@ -1,0 +1,140 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4FDA386B1971D6FB",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../oef_5_3.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "statemachine_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "CLK_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "case_out_0": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "Z_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "statemachine_0": {
+        "vlnv": "xilinx.com:module_ref:statemachine:1.0",
+        "xci_name": "design_1_statemachine_0_0",
+        "xci_path": "ip\\design_1_statemachine_0_0\\design_1_statemachine_0_0.xci",
+        "inst_hier_path": "statemachine_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "statemachine",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "X1": {
+            "direction": "I"
+          },
+          "X2": {
+            "direction": "I"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Z": {
+            "direction": "O"
+          },
+          "case_out": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "xci_path": "ip\\design_1_vio_0_0\\design_1_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK_0_1": {
+        "ports": [
+          "CLK_0",
+          "statemachine_0/CLK",
+          "vio_0/clk"
+        ]
+      },
+      "statemachine_0_Z": {
+        "ports": [
+          "statemachine_0/Z",
+          "Z_0"
+        ]
+      },
+      "statemachine_0_case_out": {
+        "ports": [
+          "statemachine_0/case_out",
+          "case_out_0"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "statemachine_0/X1"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "statemachine_0/X2"
+        ]
+      }
+    }
+  }
+}
