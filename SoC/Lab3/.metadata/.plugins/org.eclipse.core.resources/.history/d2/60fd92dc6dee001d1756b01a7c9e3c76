@@ -1,0 +1,30 @@
+/*******************************************************************************
+* Header Files
+*******************************************************************************/
+#include "cyhal.h"
+#include "cybsp.h"
+#include "stdio.h"
+
+#define HIGH 0
+#define LOW 1
+
+int main(void)
+{
+
+    cyhal_lptimer_t lptimer_obj;
+    int lptimer_value = 0;
+    /* Initialize the LPTIMER with default configuration */
+    cyhal_lptimer_init(&lptimer_obj);
+
+    cyhal_gpio_init(P0_3, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, LOW);
+    for (;;)
+    {
+    	lptimer_value = cyhal_lptimer_read(&lptimer_obj);
+    	cyhal_system_delay_ms(500);
+    	lptimer_value = cyhal_lptimer_read(&lptimer_obj);
+    	printf("%i\n",lptimer_value);
+    	cyhal_gpio_toggle(P0_3);
+    }
+}
+
+/* [] END OF FILE */

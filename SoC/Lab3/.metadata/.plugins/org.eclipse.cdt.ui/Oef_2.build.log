@@ -1,0 +1,58 @@
+10:30:43 **** Incremental Build of configuration Debug for project Oef_2 ****
+"C:\\Users\\seppe\\ModusToolbox\\tools_3.0\\modus-shell\\bin\\make" CY_MAKE_IDE=eclipse CY_IDE_TOOLS_DIR=C:/Users/seppe/ModusToolbox/tools_3.0 CY_IDE_BT_TOOLS_DIR= -j8 all 
+Tools Directory: C:/Users/seppe/ModusToolbox/tools_3.0
+Searching installed tools in progress...
+Searching installed tools complete
+
+
+
+
+Prebuild operations complete
+
+Auto-discovery in progress...
+Auto-discovery complete
+Commencing build operations...
+
+Tools Directory: C:/Users/seppe/ModusToolbox/tools_3.0
+
+Initializing build: mtb-example-empty-app Debug APP_CY8CKIT-062-WIFI-BT GCC_ARM
+
+Constructing build rules...
+Build rules construction complete
+
+==============================================================================
+= Building application =
+==============================================================================
+Generating compilation database file...
+-> ./build/compile_commands.json
+Compilation database file generation complete
+Building 208 file(s)
+==============================================================================
+= Build complete =
+==============================================================================
+
+Calculating memory consumption: CY8C6247BZI-D54 GCC_ARM
+
+   ---------------------------------------------------- 
+  | Section Name         |  Address      |  Size       | 
+   ---------------------------------------------------- 
+  | .cy_m0p_image        |  0x10000000   |  6452       | 
+  | .text                |  0x10002000   |  16996      | 
+  | .ARM.exidx           |  0x10006264   |  8          | 
+  | .copy.table          |  0x1000626c   |  24         | 
+  | .zero.table          |  0x10006284   |  8          | 
+  | .data                |  0x0800228c   |  1068       | 
+  | .cy_sharedmem        |  0x080026b8   |  12         | 
+  | .noinit              |  0x080026c8   |  236        | 
+  | .bss                 |  0x080027b4   |  644        | 
+  | .heap                |  0x08002a38   |  277960     | 
+   ---------------------------------------------------- 
+
+  Total Internal Flash (Available)          1048576    
+  Total Internal Flash (Utilized)           26316      
+
+
+  
+
+10:30:50 Build Finished. 0 errors, 0 warnings. (took 7s.336ms)
+
