@@ -1,0 +1,28 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-292,-214",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_d_out_0 -pg 1 -lvl 3 -x 660 -y 50 -defaultsOSRD
+preplace port port-id_R_0 -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace port port-id_G_0 -pg 1 -lvl 0 -x -10 -y 60 -defaultsOSRD
+preplace port port-id_B_0 -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x -10 -y 40 -defaultsOSRD
+preplace port port-id_clk_in1_0 -pg 1 -lvl 0 -x -10 -y -50 -defaultsOSRD
+preplace inst Neopixel_0 -pg 1 -lvl 2 -x 530 -y 50 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 300 -y -60 -defaultsOSRD
+preplace inst button_0 -pg 1 -lvl 1 -x 300 -y 70 -defaultsOSRD
+preplace netloc button_0_Data_out 1 1 1 410 60n
+preplace netloc Neopixel_0_d_out 1 2 1 N 50
+preplace netloc R_0_1 1 0 1 10 20n
+preplace netloc G_0_1 1 0 1 10 60n
+preplace netloc B_0_1 1 0 1 10 80n
+preplace netloc clk_wiz_0_clk_out1 1 1 1 410 -70n
+preplace netloc clk_in1_0_1 1 0 1 NJ -50
+levelinfo -pg 1 -10 300 530 660
+pagesize -pg 1 -db -bbox -sgen -120 -130 760 260
+"
+}
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar 16 10:26:40 2023
+# Process ID: 14068
+# Current directory: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_12/Oef_5_12.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_12/Oef_5_12.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/02_PXL/01_Digitale_Systemen/Labo/Oef_5_12/Oef_5_12.runs/synth_1\vivado.jou
+# Running On: DESKTOP-55K0DUP, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16969 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
