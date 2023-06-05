@@ -3,6 +3,7 @@
 *******************************************************************************/
 #include "cyhal.h"
 #include "cybsp.h"
+ cyhal_comp_t comp_obj;
 static void comp_event_handler(void* arg, cyhal_comp_event_t event)
 {
     CY_UNUSED_PARAMETER(arg);
@@ -17,6 +18,7 @@ static void comp_event_handler(void* arg, cyhal_comp_event_t event)
     }
 }
 
+
 int main(void)
 {
     /* Initialize the device and board peripherals */
@@ -25,7 +27,7 @@ int main(void)
     __enable_irq();
 
     cyhal_gpio_init(P0_3, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, false);
-    cyhal_comp_t comp_obj;
+
         cyhal_comp_config_t config = { .power = CYHAL_POWER_LEVEL_HIGH, .hysteresis = false };
         /* Initialize comparator, using pin P9_0 for the input and pin P9_1 for the reference.
         * No output pin is used.
