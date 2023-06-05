@@ -9,4 +9,4 @@ Alle files van digitale systemen PXL 2023
 - [ ] oef 6
 ## lab 5
 - [ ] oef 3
-- [ ] oef4
+- [x] oef4
