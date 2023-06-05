@@ -8,15 +8,11 @@
  int32_t adc_out;
 
  cyhal_adc_channel_t adc_chan_0_obj;
-float pwm = 0;
+ float pwm = 0;
 
 static void adc_continuous_event_handler(void* arg, cyhal_adc_event_t event)
 {
-    if(0u != (event & CYHAL_ADC_EOS))
-    {
         	adc_out = cyhal_adc_read(&adc_chan_0_obj);
-
-    }
 }
 
 
@@ -51,16 +47,17 @@ int main(void)
     	if (adc_out >= 0 ){
     	cyhal_gpio_toggle(P1_1);
     	cyhal_system_delay_ms(100);
-    		//pwm = (adc_out/(2047*2)) + 50;
-    		//cyhal_pwm_set_duty_cycle(&pwm_obj, 25, 1000);
+    	pwm = (adc_out/(2047*2)) + 50;
+    	cyhal_pwm_set_duty_cycle(&pwm_obj, pwm, 1000);
     	}
     	else
     	{
-    		//pwm = (adc_out*(-1))/(2047*2);
-    		//cyhal_pwm_set_duty_cycle(&pwm_obj, 50, 1000);
+    	   	cyhal_gpio_toggle(P1_1);
+    	    cyhal_system_delay_ms(100);
+    	    pwm = ((adc_out * (-1) )/(2047*2));
+    	    cyhal_pwm_set_duty_cycle(&pwm_obj, pwm, 1000);
     	}
-
     	//cyhal_pwm_set_duty_cycle(&pwm_obj, pwm, 1000); */
-}
+    }
 }
 /* [] END OF FILE */
