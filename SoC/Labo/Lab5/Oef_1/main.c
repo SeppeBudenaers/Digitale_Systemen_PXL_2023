@@ -34,7 +34,6 @@ int main(void)
     {
     	cyhal_system_delay_ms(2000);
     	cyhal_syspm_deepsleep();
-
     }
 }
 
