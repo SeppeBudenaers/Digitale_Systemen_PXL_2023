@@ -6,16 +6,7 @@
  cyhal_comp_t comp_obj;
 static void comp_event_handler(void* arg, cyhal_comp_event_t event)
 {
-    CY_UNUSED_PARAMETER(arg);
-    /* Note: arg is configured below to be a pointer to the cyhal_comp_t instance that caused the event */
-    if(0u != (event & CYHAL_COMP_RISING_EDGE))
-    {
-    	cyhal_gpio_write(P0_3, 0);
-    }
-    if(0u != (event & CYHAL_COMP_FALLING_EDGE))
-    {
-    	cyhal_gpio_write(P0_3, 1);
-    }
+	 cyhal_gpio_toggle(P1_1);
 }
 
 
@@ -26,7 +17,7 @@ int main(void)
     /* Enable global interrupts */
     __enable_irq();
 
-    cyhal_gpio_init(P0_3, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, false);
+    cyhal_gpio_init(P1_1, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, false);
 
         cyhal_comp_config_t config = { .power = CYHAL_POWER_LEVEL_HIGH, .hysteresis = false };
         /* Initialize comparator, using pin P9_0 for the input and pin P9_1 for the reference.
@@ -48,3 +39,4 @@ int main(void)
 }
 
 /* [] END OF FILE */
+
