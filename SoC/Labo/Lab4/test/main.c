@@ -1,59 +1,68 @@
-/*******************************************************************************
-* Header Files
-*******************************************************************************/
 #include "cyhal.h"
 #include "cybsp.h"
+#define ADC_VPLUS1 (P10_0)
 
-/*******************************************************************************
-* Global Variables
-*******************************************************************************/
-#define HIGH 	0
-#define LOW 	1
+int32_t adc_out;
+cyhal_adc_t         adc_obj;
+cyhal_adc_channel_t adc_chan_0_obj;
+bool led = true;
 
-int state = 0;
-int counted = 0;
-void gpio_interrupt_handler(void* handler_arg, cyhal_gpio_event_t event)
+
+static void adc_continuous_event_handler(void* arg, cyhal_adc_event_t event)
 {
-	state++;
+
+    if(0u != (event & CYHAL_ADC_EOS))
+    {       int32_t adc_out;
+            adc_out= cyhal_adc_read(&adc_chan_0_obj);
+            cyhal_system_delay_ms(500);
+            if (adc_out >= 20)
+            {
+                led = false;
+            }
+            if (adc_out <= 20)
+            {
+                led = true;
+            }
+            cyhal_gpio_write(P0_3, led);
+    }
 }
-
-cyhal_gpio_callback_data_t cb_data =
-{
-    .callback     = gpio_interrupt_handler
-};
 
 int main(void)
 {
-	/* Initialize the device and board peripherals */
-	    cybsp_init();
-	    /* GPIO init*/
-	    cyhal_gpio_init(P0_4, CYHAL_GPIO_DIR_INPUT, CYHAL_GPIO_DRIVE_NONE, false);
-	    cyhal_gpio_init(P0_3, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, true);
-	    /* Enable global interrupts */
-	    __enable_irq();
-	    /* call back event */
-	    cyhal_gpio_register_callback(P0_4, &cb_data);
-	    cyhal_gpio_enable_event(P0_4, CYHAL_GPIO_IRQ_BOTH, 3, true);
+
+
+
+
+    cyhal_adc_config_t config =
+    {
+            .continuous_scanning = true
+    };
+
+    const cyhal_adc_channel_config_t channel_config =
+        {
+                .enable_averaging = false,
+                .min_acquisition_ns = 220,
+                .enabled = true
+        };
+
+    cybsp_init();
+
+    __enable_irq();
+
+    cyhal_gpio_init(P0_3, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, 1u);
+
+
+    cyhal_adc_init(&adc_obj, ADC_VPLUS1, NULL);
+    cyhal_adc_configure(&adc_obj, &config);
+    cyhal_adc_channel_init_diff(&adc_chan_0_obj, &adc_obj, ADC_VPLUS1, CYHAL_ADC_VNEG,    &channel_config);
+
+    cyhal_adc_register_callback(&adc_obj, &adc_continuous_event_handler, &adc_obj);
+    cyhal_adc_enable_event(&adc_obj, CYHAL_ADC_EOS, CYHAL_ISR_PRIORITY_DEFAULT, true);
+    /* Call the ADC configure function to begin continuous scanning */
+    cyhal_adc_configure(&adc_obj, &config);
+
 
     for (;;)
     {
-    	switch (state){
-
-    	case 3:
-    		if(counted < 10){
-    			cyhal_gpio_toggle(P0_3);
-    			cyhal_system_delay_ms(100);
-    			counted++;
-    		}
-    		break;
-    	case 4:
-    		counted = 0;
-    		cyhal_gpio_write(P0_3,LOW);
-    		state = 0;
-    		cyhal_syspm_deepsleep();
-    		break;
-    	default:
-    		cyhal_syspm_deepsleep();
-    	}
     }
 }

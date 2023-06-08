@@ -2,9 +2,9 @@
 Alle files van digitale systemen PXL 2023
 # todo
 ## lab 4
-- [ ] oef 2
-- [ ] oef 3
-- [ ] oef 4 maybe
+- [x] oef 2
+- [x] oef 3
+- [ ] oef 4 
 - [x] oef 5
 - [x] oef 6
 ## lab 5
