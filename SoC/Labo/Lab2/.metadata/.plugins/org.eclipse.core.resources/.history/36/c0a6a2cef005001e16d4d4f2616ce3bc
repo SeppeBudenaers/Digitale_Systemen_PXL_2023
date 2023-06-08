@@ -11,7 +11,7 @@
 #define LOW 	1
 
 int state = 0;
-int counted = 0;
+
 void gpio_interrupt_handler(void* handler_arg, cyhal_gpio_event_t event)
 {
 	state++;
@@ -40,14 +40,10 @@ int main(void)
     	switch (state){
 
     	case 3:
-    		if(counted < 10){
-    			cyhal_gpio_toggle(P0_3);
-    			cyhal_system_delay_ms(100);
-    			counted++;
-    		}
+    		cyhal_gpio_toggle(P0_3);
+    		cyhal_system_delay_ms(100);
     		break;
     	case 4:
-    		counted = 0;
     		cyhal_gpio_write(P0_3,LOW);
     		state = 0;
     		cyhal_syspm_deepsleep();
@@ -57,3 +53,5 @@ int main(void)
     	}
     }
 }
+
+/* [] END OF FILE */

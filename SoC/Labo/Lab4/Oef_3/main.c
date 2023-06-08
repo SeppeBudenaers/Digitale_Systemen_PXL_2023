@@ -37,9 +37,9 @@ int main(void)
 	    * so that we can easily reference it in the event handler. */
 	    cyhal_adc_register_callback(&adc_obj, &adc_continuous_event_handler, &adc_obj);
 	    /* Subscribe to the end of scan event so that we we can process the results as each scan completes*/
-	        cyhal_adc_enable_event(&adc_obj, CYHAL_ADC_EOS, CYHAL_ISR_PRIORITY_DEFAULT, true);
-	        /* Call the ADC configure function to begin continuous scanning */
-	      cyhal_adc_configure(&adc_obj, &config);
+	    cyhal_adc_enable_event(&adc_obj, CYHAL_ADC_EOS, CYHAL_ISR_PRIORITY_DEFAULT, true);
+	    /* Call the ADC configure function to begin continuous scanning */
+	    cyhal_adc_configure(&adc_obj, &config);
 
 
     for (;;)

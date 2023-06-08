@@ -4,6 +4,8 @@
 #include "cyhal.h"
 #include "cybsp.h"
 
+int32_t adc_out;
+
 int main(void)
 {
 	 	 cybsp_init();
@@ -12,7 +14,7 @@ int main(void)
 	    cyhal_adc_t adc_obj;
 	    cyhal_adc_channel_t adc_chan_0_obj;
 	    /* ADC conversion result. */
-	    int32_t adc_out;
+
 	    /* Initialize ADC. The ADC block which can connect to pin 10[0] is selected */
 	    cyhal_gpio_init(P1_1, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, 0u);
 	    rslt = cyhal_adc_init(&adc_obj, P10_0, NULL);
@@ -24,8 +26,7 @@ int main(void)
 
     for (;;)
     {
-    	cyhal_gpio_toggle(P1_1);
-    	adc_out = cyhal_adc_read(&adc_chan_0_obj);
+
 		cyhal_system_delay_ms(500);
     	if (adc_out > 0){
     		cyhal_gpio_write(P1_1, 0);
